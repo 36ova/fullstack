@@ -1,4 +1,4 @@
-import { MainLink } from "./MainLink";
+import { MainLink } from "./Links/MainLink";
 import { WordLink } from "./Links/BlueWordLink";
 
 export function Main() {

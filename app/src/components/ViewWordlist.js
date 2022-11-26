@@ -7,7 +7,7 @@ export function ViewWordlist() {
     <label className="annotation">by Erick, 05 Oct 2022 </label>
       <table className="Table">
         <thead className="Thead">
-          <tr className="Tr">
+          <tr>
             <th className="Th">word</th>
             <th className="Th">definition</th>
             <th className="Th">synonym</th>

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-
 export const SubmitLink = (props) => {
   const { to, children } = props;
 

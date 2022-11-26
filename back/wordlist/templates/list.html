@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {%block content%}
+<div>
+  <div>List of wordlists</div>
+  {% for wordlist in wordlists %}
+  <div>{{wordlist.title}}</div>
+  <div>{{wordlist.date_creation}}</div>
+  <div>{{wordlist.user.username}}</div>
+  {% endfor %}
+</div>
+{%endblock%}

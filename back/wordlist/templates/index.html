@@ -1,0 +1,6 @@
+{% extends 'base.html' %} {%block content%}
+<div>
+  <div>Hello, world</div>
+  {{ wordlist.id }} {{ wordlist.title }} {{ wordlist.date_creation }} {{ wordlist.user.username }}
+</div>
+{%endblock%}

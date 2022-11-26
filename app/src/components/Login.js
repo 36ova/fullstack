@@ -1,9 +1,8 @@
 import { WordLink } from "./Links/BlueWordLink"
 
 export function Login() {
-  // console.log("fdsfdsf");
   return (
-    <aside className="main-aside">
+    <aside className="side-aside">
       <div className="roundable form">
       <form>
         <div>
@@ -19,7 +18,7 @@ export function Login() {
           <input name="password"></input>
         </div>
         <div>
-          <button className="verify-button" type="login">Login</button>
+          <button className="button_send">Login</button>
         </div>
         <div>
           <label className="annotation">Don't have an account? </label><WordLink to="/signup">Register</WordLink>
