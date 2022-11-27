@@ -4,6 +4,12 @@ import { useState } from "react";
 import { Item } from "./Item";
 
 export function NewWordlist() {
+  const [title, setTitle] = useState(
+    {
+      name: "Untitled Wordlist"
+    }
+  );
+
   const [items, setItems] = useState([
     {
       word: "agglutinate",
@@ -28,7 +34,18 @@ export function NewWordlist() {
 
   return <aside className="side-aside">
     <table className="Table">
-      <caption className="Caption"><Word>Untitled Wordlist</Word></caption>
+      <caption className="Caption">
+      <Item
+        value={title.name}
+        isNew={title.isNew}
+        onSave={(value) => {
+          const newTitle = [title];
+          newTitle.name = value;
+          newTitle.isNew = false;
+          setTitle(newTitle);
+        }}
+      />
+      </caption>
       <thead className="Thead">
         <tr>
           <th className="Th">word</th>
@@ -77,7 +94,7 @@ export function NewWordlist() {
             />
           </td>
           <td className="Td">
-            <label class="context-label"><Item
+            <label className="context-label"><Item
               value={item.context}
               isNew={item.isNew}
               onSave={(value) => {

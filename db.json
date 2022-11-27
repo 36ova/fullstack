@@ -1,9 +1,9 @@
 {
-  "logins": [
-    {
-      "id": 1,
-      "login": "haha",
-      "password": "123"
-    }
+  "wordlists": [
+    {"id": 1, "title": "Harry P.", "user": "erick" },
+    {"id": 2, "title": "Godfather", "user": "leeda"}
+  ],
+  "entries": [
+    {"word": "auburn", "definition": "brown", "synonym": "red-brown", "context": "auburn hair"}
   ]
 }

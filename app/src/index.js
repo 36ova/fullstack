@@ -13,23 +13,23 @@ root.render(
   </StrictMode>
 );
 
-fetch("http://localhost:5002/logins")
+fetch("http://localhost:5002/wordlists ")
   .then((data) => {
     return data.json();
 })
   .then((data) => {
-    console.log(data);
+    const parentNode = document.querySelector(".main-aside");
 
-    // const parentNode = document.querySelector(".main-aside");
+    data.forEach((wordlist) => {
+      console.log(parentNode, wordlist)
+      const node = document.createElement("section");
+      node.classList.add("roundable");
 
-    // data.forEach((blog) => {
-    //   const node = document.createElement("section");
-    //   node.classList.add("roundable");
+      node.innerHTML = `
+        <h1>${wordlist.title}</h1>
+        <p>${wordlist.user}</p>
+      `;
 
-    //   node.innerHTML = `
-    //     <h1>${blog.title}</h1>
-    //     <p>${blog.description}</p>
-    //   `;
-
-    //   parentNode.appendChild(node);
+      parentNode.appendChild(node);
+    });
   });
